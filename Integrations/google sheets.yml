@@ -1,0 +1,55 @@
+version: 2
+
+- name: google sheets
+    description: some markdown description for gsheet
+    meta:
+        watchers: 
+          - someone1@y42.com
+        experts: 
+          - hd@y42.com
+          - someone2@y42.com
+        asset_status: deprecated
+        contains_pii: true
+    tags: 
+      - ecom
+      - pii
+
+    # y42 specific source settings
+    configs: 
+      auth_key: 124vdf-23423cs-23423vs-scgsdcw #committed by Y42's backend
+      start_date: 29385182
+      account_ids:
+        - 23491234
+        - 2349231
+    # ----
+
+    tables:
+      - name: first gsheet import table
+        description: some more marketdown
+        meta:
+            watchers: 
+              - someone3@y42.com
+            experts: 
+              - someone2@y42.com
+            asset_status: valid
+            contains_pii: true
+            columns:
+              - name: email
+                meta:
+                  contains_pii: true
+        configs: 
+
+        tags: 
+          - some tags
+          - lala
+  
+        columns:
+          - name: <column_name> # required
+            description: <markdown_string>
+            meta: {<dictionary>}
+            quote: true | false
+            tests:
+                - accepted_values:
+                    values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+            tags: [<string>]
+          - name: ... # declare properties of additional columns
