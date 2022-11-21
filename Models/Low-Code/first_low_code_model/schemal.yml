@@ -1,0 +1,11 @@
+version: 2
+
+low-code-models:
+  - name: some name 
+    key: 2f4ae2ed-39c2-4be0-9622-e23af18c052b
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+

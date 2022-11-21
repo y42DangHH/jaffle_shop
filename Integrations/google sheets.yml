@@ -1,55 +1,74 @@
 version: 2
 
-- name: google sheets
-    description: some markdown description for gsheet
+
+name: google sheets
+description: some markdown description for gsheet
+meta:
+    watchers: 
+      - someone1@y42.com
+    experts: 
+      - hd@y42.com
+      - someone2@y42.com
+    asset_status: deprecated
+    contains_pii: true
+tags: 
+  - ecom
+  - pii
+
+# y42 specific source settings
+import_configs: 
+  auth_key: 124vdf-23423cs-23423vs-scgsdcw #committed by Y42's backend
+  start_date: 29385182
+  account_ids:
+    - 23491234
+    - 2349231
+# ----
+
+tables:
+  - name: first gsheet import table
+    description: some more marketdown
     meta:
         watchers: 
-          - someone1@y42.com
+          - someone3@y42.com
         experts: 
-          - hd@y42.com
           - someone2@y42.com
-        asset_status: deprecated
+        asset_status: valid
         contains_pii: true
-    tags: 
-      - ecom
-      - pii
-
-    # y42 specific source settings
-    configs: 
-      auth_key: 124vdf-23423cs-23423vs-scgsdcw #committed by Y42's backend
-      start_date: 29385182
-      account_ids:
-        - 23491234
-        - 2349231
-    # ----
-
-    tables:
-      - name: first gsheet import table
-        description: some more marketdown
-        meta:
-            watchers: 
-              - someone3@y42.com
-            experts: 
-              - someone2@y42.com
-            asset_status: valid
-            contains_pii: true
-            columns:
-              - name: email
-                meta:
-                  contains_pii: true
-        configs: 
-
-        tags: 
-          - some tags
-          - lala
-  
         columns:
-          - name: <column_name> # required
-            description: <markdown_string>
-            meta: {<dictionary>}
-            quote: true | false
-            tests:
-                - accepted_values:
-                    values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
-            tags: [<string>]
-          - name: ... # declare properties of additional columns
+          - name: email
+            meta:
+              contains_pii: true
+
+    # y42 specific table settings
+    import_configs: 
+      table_name: file/path/gsheet
+
+    # this.columns = settings.columns;
+    # this.import = settings.import;
+    # this.key_properties = settings.key_properties;
+    # this['content-type'] = settings['content-type'];
+    # this.uploadTarget = settings.uploadTarget;
+    # this.originalName = settings.originalName;
+    # this.size = settings.size;
+    # this.uri = settings.uri;
+    # this.reupload = settings.reupload;
+    # this.sheet_id = settings.sheet_id;
+    # this.mime_type = settings.mime_type;
+    # this.table_id = settings.table_id;
+    # this._datos_write_settings = settings._datos_write_settings;
+    # this.csv_options = settings.csv_options;
+    # this.output_key = settings.output_key;
+
+    # -----
+    tags: 
+      - some tags
+      - lala
+
+    columns:
+      - name: email
+        description: the email of someone
+        tests:
+            - accepted_values:
+                values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
+      - name: id
+      - name: another_column

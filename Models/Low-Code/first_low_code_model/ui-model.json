@@ -1,0 +1,571 @@
+{
+    "nodeDataArray": [
+      {
+        "key": "df1fde9a-4b8e-4698-a7b8-e2ae5a5ce829",
+        "type": "INPUT",
+        "category": "INPUT",
+        "transformationStep": {
+          "id": "df1fde9a-4b8e-4698-a7b8-e2ae5a5ce829",
+          "title": "contacts",
+          "transformationType": "INPUT",
+          "datasourceName": "Intercom",
+          "transformObject": {
+            "source": "src/Integrations/Intercom",
+            "table": "src/Integrations/Intercom/contacts",
+            "lang": ""
+          }
+        },
+        "isGroup": true,
+        "group": "",
+        "location": "-299.56066498571863 -161.628086246316"
+      },
+      {
+        "key": "96ed49fd-6fa6-475e-b888-ad4f2c132824",
+        "type": "FUNCTIONS",
+        "category": "FUNCTIONS",
+        "transformationStep": {
+          "id": "96ed49fd-6fa6-475e-b888-ad4f2c132824",
+          "title": "",
+          "transformationType": "FUNCTIONS",
+          "transformObject": [
+            {
+              "target": "surrogate_key",
+              "originalString": "MD5(CONCAT(@workspace_id, @external_id))"
+            }
+          ]
+        },
+        "isGroup": true,
+        "group": "",
+        "location": "19.347284805076356 -196.6811736178458"
+      },
+      {
+        "key": "2f4ae2ed-39c2-4be0-9622-e23af18c052b",
+        "type": "OUTPUT",
+        "category": "OUTPUT",
+        "transformationStep": {
+          "id": "2f4ae2ed-39c2-4be0-9622-e23af18c052b",
+          "title": "some name",
+          "transformationType": "OUTPUT",
+          "transformObject": {
+            "name": "some name",
+            "fields": [
+              {
+                "target": "name",
+                "source": "name",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "id",
+                "source": "id",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": true
+              },
+              {
+                "target": "type",
+                "source": "type",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "workspace_id",
+                "source": "workspace_id",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "external_id",
+                "source": "external_id",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "role",
+                "source": "role",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "email",
+                "source": "email",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "phone",
+                "source": "phone",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "avatar",
+                "source": "avatar",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "owner_id",
+                "source": "owner_id",
+                "type": "INTEGER",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "social_profiles",
+                "source": "social_profiles",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "unsubscribed_from_emails",
+                "source": "unsubscribed_from_emails",
+                "type": "BOOLEAN",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "marked_email_as_spam",
+                "source": "marked_email_as_spam",
+                "type": "BOOLEAN",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "has_hard_bounced",
+                "source": "has_hard_bounced",
+                "type": "BOOLEAN",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "created_at",
+                "source": "created_at",
+                "type": "TIMESTAMP",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "updated_at",
+                "source": "updated_at",
+                "type": "TIMESTAMP",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "signed_up_at",
+                "source": "signed_up_at",
+                "type": "TIMESTAMP",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "last_seen_at",
+                "source": "last_seen_at",
+                "type": "TIMESTAMP",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "last_replied_at",
+                "source": "last_replied_at",
+                "type": "TIMESTAMP",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "last_contacted_at",
+                "source": "last_contacted_at",
+                "type": "TIMESTAMP",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "last_email_opened_at",
+                "source": "last_email_opened_at",
+                "type": "TIMESTAMP",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "last_email_clicked_at",
+                "source": "last_email_clicked_at",
+                "type": "TIMESTAMP",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "language_override",
+                "source": "language_override",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "browser",
+                "source": "browser",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "browser_version",
+                "source": "browser_version",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "browser_language",
+                "source": "browser_language",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "os",
+                "source": "os",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "location",
+                "source": "location",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "android_app_name",
+                "source": "android_app_name",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "android_app_version",
+                "source": "android_app_version",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "android_device",
+                "source": "android_device",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "android_os_version",
+                "source": "android_os_version",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "android_sdk_version",
+                "source": "android_sdk_version",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "android_last_seen_at",
+                "source": "android_last_seen_at",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "ios_app_name",
+                "source": "ios_app_name",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "ios_app_version",
+                "source": "ios_app_version",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "ios_device",
+                "source": "ios_device",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "ios_os_version",
+                "source": "ios_os_version",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "ios_sdk_version",
+                "source": "ios_sdk_version",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "ios_last_seen_at",
+                "source": "ios_last_seen_at",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "tags",
+                "source": "tags",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "notes",
+                "source": "notes",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "custom_attributes",
+                "source": "custom_attributes",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "companies",
+                "source": "companies",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              },
+              {
+                "target": "surrogate_key",
+                "source": "surrogate_key",
+                "type": "STRING",
+                "display": true,
+                "changed": false,
+                "description": "",
+                "source_alias": "",
+                "applied": false,
+                "sourceTypeChanged": false
+              }
+            ]
+          }
+        },
+        "isGroup": true,
+        "group": "",
+        "location": "292.83264045361193 -253.86484708723356"
+      }
+    ],
+    "linkDataArray": [
+      {
+        "to": "96ed49fd-6fa6-475e-b888-ad4f2c132824",
+        "from": "df1fde9a-4b8e-4698-a7b8-e2ae5a5ce829",
+        "frompid": "OUT",
+        "topid": "IN"
+      },
+      {
+        "to": "2f4ae2ed-39c2-4be0-9622-e23af18c052b",
+        "from": "96ed49fd-6fa6-475e-b888-ad4f2c132824",
+        "frompid": "OUT",
+        "topid": "IN"
+      }
+    ],
+    "$schema": "https://s.dev.y42.dev/integrations/ui_model/0.0.1/model.json"
+  }
+  
